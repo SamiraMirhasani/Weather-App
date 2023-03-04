@@ -1,6 +1,3 @@
-//Feature 1
-
-//feature 2
 function enterCity(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#city-name");
@@ -9,9 +6,9 @@ function enterCity(event) {
   function showCondition(response) {
     document.querySelector("#city").innerHTML = response.data.name;
     document.querySelector("#date").innerHTML = `${day} ${hours}:${minutes}`;
-    document.querySelector("#temperature").innerHTML = Math.round(
-      response.data.main.temp
-    );
+    celciusTemperature = response.data.main.temp;
+    document.querySelector("#temperature").innerHTML =
+      Math.round(celciusTemperature);
     document.querySelector("#description").innerHTML =
       response.data.weather[0].description;
     document.querySelector(
@@ -42,4 +39,22 @@ let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 let day = days[now.getDate()];
 let form = document.querySelector("#search-city");
 form.addEventListener("submit", enterCity);
-//API
+
+//Unit Conversion
+function ShowcelsiusTemp(event) {
+  event.preventDefault();
+  document.querySelector("#temperature").innerHTML =
+    Math.round(celciusTemperature);
+}
+function ShowfahrenheitTemp(event) {
+  event.preventDefault();
+  document.querySelector("#temperature").innerHTML = Math.round(
+    (celciusTemperature * 9) / 5 + 32
+  );
+}
+let celciusTemperature = null;
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", ShowfahrenheitTemp);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", ShowcelsiusTemp);
