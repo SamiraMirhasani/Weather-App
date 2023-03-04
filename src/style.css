@@ -10,6 +10,14 @@ body {
   border: 1px solid #b6b6b6;
   border-radius: 10px;
 }
+#search-button {
+  background: #ffd588;
+  border: 2px solid #c5c5c5;
+  border-radius: 5px;
+  padding: 2px 20px;
+  font-size: 15px;
+  font-weight: 500;
+}
 .col-3 {
   padding: 20px;
   color: #00b1a5;
@@ -19,23 +27,14 @@ body {
   padding: 20px;
   color: #00b1a5;
   font-weight: bolder;
-
   font-size: larger;
 }
-.col-4:hover {
-  color: #ff3366;
-}
+
 .city {
   padding: 10px 0;
   border-radius: 4px;
 }
-.btn-primary {
-  background: #ff3366;
-  border: #00b1a5;
-}
-.btn-primary:hover {
-  background: #00b1a5;
-}
+
 .card-group {
   padding-top: 20px;
 }
@@ -82,7 +81,7 @@ li {
   font-weight: 400;
 }
 a {
-  color: #007bff;
+  color: #885df1;
   text-decoration: none;
   background-color: transparent;
   text-decoration: none;
