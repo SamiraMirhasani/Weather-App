@@ -1,21 +1,32 @@
+body {
+  font-family: roboto;
+  background: #f0f0f0;
+  margin-top: 50px;
+}
+.container {
+  max-width: 600px;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #b6b6b6;
+  border-radius: 10px;
+}
 .col-3 {
   padding: 20px;
   color: #00b1a5;
   font-weight: bolder;
-  font-family: roboto;
 }
 .col-4 {
   padding: 20px;
   color: #00b1a5;
   font-weight: bolder;
-  font-family: roboto;
+
   font-size: larger;
 }
 .col-4:hover {
   color: #ff3366;
 }
 .city {
-  padding: 5px 0;
+  padding: 10px 0;
   border-radius: 4px;
 }
 .btn-primary {
@@ -25,13 +36,19 @@
 .btn-primary:hover {
   background: #00b1a5;
 }
-
+.card-group {
+  padding-top: 20px;
+}
+.card-text {
+  font-size: 20px;
+}
 h1 {
+  font-family: Arial, sans-serif;
   color: #7c7c7c;
-  font-size: 24px;
+  font-size: 35px;
   font-weight: 100;
-  line-height: 28px;
-  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 ul {
   margin: 0 0 10px;
@@ -61,9 +78,8 @@ li {
 }
 .temperature {
   color: rgb(33, 33, 33);
-  font-size: 64px;
+  font-size: 50px;
   font-weight: 400;
-  line-height: 1;
 }
 a {
   color: #007bff;
@@ -72,15 +88,21 @@ a {
   text-decoration: none;
   font-size: smaller;
 }
+span {
+  color: #7c7c7c;
+  font-size: smaller;
+}
 .units {
   position: relative;
-  top: -34px;
+  top: -32px;
+  font-size: 15px;
 }
 .weather-icon {
   height: 64px;
   width: 64px;
   margin-right: 10px;
+  margin-bottom: 22px;
 }
-div {
-  display: block;
+small {
+  color: #7c7c7c;
 }
