@@ -74,7 +74,7 @@ a {
   max-width: 50%;
 }
 
-.card-group {
+#forecast {
   padding-top: 20px;
 }
 .card-title {
@@ -93,4 +93,7 @@ a {
   font-weight: bolder;
   font-weight: 16px;
   font-size: 13px;
+}
+.forcast {
+  text-align: center;
 }
