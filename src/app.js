@@ -27,6 +27,7 @@ function enterCity(event) {
       .querySelector("#icon")
       .setAttribute("alt", `response.data.weather[0].description`);
   }
+
   let apiKey = "caf1f1c8b723edf56ea35c0626f88b06";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showCondition);
