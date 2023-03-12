@@ -59,3 +59,30 @@ fahrenheitLink.addEventListener("click", ShowfahrenheitTemp);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", ShowcelsiusTemp);
+
+function displayForecast() {
+  let forecastElement = document.querySelector(`#forecast`);
+  let forecastHTML = `<div class="row"`;
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+          <div class="card-body">
+            <div class="card-title">${day}</div>
+            <img
+              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+              alt="Cloudy icon"
+              id="icon"
+              class="weather-icon"
+            />
+            <div class="weather-temperatures">
+              <span class="maxTemp">15°</span> <span class="minTemp">8°</span>
+            </div>
+          </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();
